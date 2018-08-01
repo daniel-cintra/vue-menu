@@ -1,6 +1,6 @@
 # An example of slide menu using Vue and Vue Router
 
-This is a simplified version of the responsive menu I implemented in the Admin Panel of a project some time ago. Maybe it can help newcomers to [Vue.js](https://vuejs.org/) and [Vue Router](https://router.vuejs.org/) to have some ideas of how to start puting the framework, router, styles and other concepts together.
+This is a simplified version of the responsive menu I implemented in the Admin Panel of a project some time ago. It uses [Vue.js](https://vuejs.org/) and [Vue Router](https://router.vuejs.org/) and shares some ideas of how to start puting the framework, router, styles and other concepts together.
 
 ![vue menu demo](https://github.com/daniel-cintra/vue-menu/blob/master/demo-screencast/menu-vue.gif)
 
