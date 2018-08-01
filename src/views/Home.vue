@@ -41,7 +41,7 @@
         <li>
           <strong>src/router.js</strong>
           where each route can be mapped to load the correspondent component.
-          For the sake of simplicity, with exception of the route home, the
+          For the sake of simplicity, with exception of the <strong>home route</strong>, the
           sections are loaded dynamically in this example.
         </li>
 
