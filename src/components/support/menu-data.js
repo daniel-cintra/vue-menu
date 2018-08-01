@@ -87,7 +87,7 @@ export default {
     {
       type: 'title',
       txt: 'Change Subscription',
-      icon: 'fa fa-user context-menu__title-icon',
+      icon: 'fa fa-credit-card context-menu__title-icon',
     },
 
     {

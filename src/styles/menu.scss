@@ -50,9 +50,10 @@ ul {
   font-weight: 700;
   color: #fff;
 
-  &::hover {
-    color: #fff;
+  &:hover {
+    color: #ccc;
     text-decoration: none;
+    transition: all 150ms ease;
   }
 }
 
@@ -73,11 +74,13 @@ ul {
   padding: 10px 15px 10px 15px;
   color: #fff;
   text-decoration: none;
+  background: #31373D;
 
   &:hover {
     color: #fff;
     text-decoration: none;
     background: #3c444b;
+    transition: all 500ms ease-out;
   }
 
   &:visited {
@@ -128,12 +131,14 @@ ul {
   padding: 10px;
   color: #fff;
   text-decoration: none;
+  background: transparent;
 
   &:hover {
     color: #fff;
     text-decoration: none;
     background: #3c444b;
     cursor: pointer;
+    transition: all 500ms ease-out;
   }
 
   &:visited {
@@ -146,7 +151,6 @@ ul {
 }
 
 // links
-
 .menu__link--active {
   background: #000;
 }

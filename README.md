@@ -1,12 +1,17 @@
-# One Menu example using Vue and Vue Router
+# An example of slide menu implementation using Vue and Vue Router
 
-This is a simplified version of the menu I implemented in the Admin Panel of the [Shopster Plataform](https://shopster.com.br).
+This is a simplified version of the responsive menu I implemented in the Admin Panel of a project some time ago. Maybe it can help newcomers to [Vue.js](https://vuejs.org/) and [Vue Router](https://router.vuejs.org/) to have some ideas of how to start puting the framework, router, styles and other concepts together.
 
-The menu uses [Vue.js](https://vuejs.org/) and [Vue Router](https://router.vuejs.org/) to load the sections content.
+The menu can be easily customized changing:
 
-It can be easily customized changing `src/components/Menu.vue`, `src/components/support/menu-data.js` and `src/router.js`.
+1. `src/components/Menu.vue` where the root level itens can be found.
 
-More to come...
+2. `src/components/support/menu-data.js` where the childs of root level itens can be found.
+
+3. `src/router.js` where each route can be mapped to load the correspondent component. For the sake of simplicity, with exception of the route `home`, the sections are loaded dynamically in this example.
+
+## Styles
+The styles use [Sass](http://sass-lang.com/) css extension language and [BEM Methodology](http://getbem.com/). Each component has the correspondent `.scss` file in `src/styles`, and is imported in `src/App.vue`. This way, is easy to see how the final css is composed and the order of the includes (media queries in the end of the .scss imports).
 
 ## Project setup
 ```
@@ -27,3 +32,6 @@ yarn run build
 ```
 yarn run lint
 ```
+
+## License
+This menu is licensed under the [Mit License](https://opensource.org/licenses/MIT).
