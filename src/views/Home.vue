@@ -1,4 +1,5 @@
 <template>
+
   <div class="main-content">
 
     <div class="main-content__top">
@@ -50,13 +51,13 @@
     </div>
 
   </div>
+
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'home'
 }
+
 </script>

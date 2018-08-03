@@ -1,5 +1,6 @@
 export default {
 
+  // home is a section without childs, set as an empty array
   home: [],
 
   products: [

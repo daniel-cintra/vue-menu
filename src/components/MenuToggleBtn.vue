@@ -1,12 +1,12 @@
 <template>
 
-    <a
-    href="#"
-    class="btn menu-toggle-btn"
-    @click.prevent="toggleMenu"
-    >
-      <i class="fa fa-bars" aria-hidden="true"></i>
-    </a>
+  <a
+  href="#"
+  @click.prevent="toggleMenu"
+  class="btn menu-toggle-btn"
+  >
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </a>
 
 </template>
 

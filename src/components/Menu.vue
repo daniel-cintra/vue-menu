@@ -2,124 +2,109 @@
 
   <div class="menu-container">
 
+    <!-- root level itens -->
     <ul class="menu">
 
       <li class="menu__top">
-
-        <router-link
-        to="/"
-        class="menu__logo">
-
+        <router-link to="/" class="menu__logo">
           <img src="/icon-32.png" alt="icon">
-
         </router-link>
-
         <a
         href="#"
         @click.prevent="openProjectLink"
-        class="menu__title">
+        class="menu__title"
+        >
           Project Name...
         </a>
-
       </li>
 
       <li>
-
-          <a
-          @click.prevent="updateMenu('home')"
-          href="#"
-          :class="highlightSection('home')"
-          >
+        <a
+        href="#"
+        @click.prevent="updateMenu('home')"
+        :class="highlightSection('home')"
+        >
             <i class="fa fa-home menu__icon" aria-hidden="true"></i>
             Home
-          </a>
-
+        </a>
       </li>
 
       <li>
-
-          <a
-          @click.prevent="updateMenu('products')"
-          href="#"
-          :class="highlightSection('products')"
-          >
-            <i class="fa fa-tag menu__icon" aria-hidden="true"></i>
-            Products
-            <i class="fa fa-chevron-right menu__arrow-icon" aria-hidden="true"></i>
-          </a>
-
+        <a
+        href="#"
+        @click.prevent="updateMenu('products')"
+        :class="highlightSection('products')"
+        >
+          <i class="fa fa-tag menu__icon" aria-hidden="true"></i>
+          Products
+          <i class="fa fa-chevron-right menu__arrow-icon" aria-hidden="true"></i>
+        </a>
       </li>
 
       <li>
-
-          <a
-          @click.prevent="updateMenu('customers')"
-          href="#"
-          :class="highlightSection('customers')"
-          >
-            <i class="fa fa-users menu__icon" aria-hidden="true"></i>
-            Customers
-            <i class="fa fa-chevron-right menu__arrow-icon" aria-hidden="true"></i>
-          </a>
-
+        <a
+        href="#"
+        @click.prevent="updateMenu('customers')"
+        :class="highlightSection('customers')"
+        >
+          <i class="fa fa-users menu__icon" aria-hidden="true"></i>
+          Customers
+          <i class="fa fa-chevron-right menu__arrow-icon" aria-hidden="true"></i>
+        </a>
       </li>
 
       <li>
-
-          <a
-          @click.prevent="updateMenu('account')"
-          href="#"
-          :class="highlightSection('account')"
-          >
-            <i class="fa fa-user menu__icon" aria-hidden="true"></i>
-            Account
-            <i class="fa fa-chevron-right menu__arrow-icon" aria-hidden="true"></i>
-          </a>
-
+        <a
+        href="#"
+        @click.prevent="updateMenu('account')"
+        :class="highlightSection('account')"
+        >
+          <i class="fa fa-user menu__icon" aria-hidden="true"></i>
+          Account
+          <i class="fa fa-chevron-right menu__arrow-icon" aria-hidden="true"></i>
+        </a>
       </li>
 
     </ul>
 
+    <!-- context menu: childs of root level itens -->
     <transition name="slide-fade">
 
       <div class="context-menu-container" v-show="showContextMenu">
 
-      <ul class="context-menu">
+        <ul class="context-menu">
 
-        <li v-for="(item, index) in menuItens" :key="index">
+          <li v-for="(item, index) in menuItens" :key="index">
 
-          <h5
-          v-if="item.type === 'title'"
-          class="context-menu__title"
-          >
+            <h5 v-if="item.type === 'title'" class="context-menu__title">
 
-            <i :class="item.icon" aria-hidden="true"></i>
+              <i :class="item.icon" aria-hidden="true"></i>
 
-            {{item.txt}}
+              {{item.txt}}
+
+              <a
+              v-if="index === 0"
+              @click.prevent="closeContextMenu"
+              class="context-menu__btn-close"
+              href="#"
+              >
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+              </a>
+
+            </h5>
 
             <a
-            v-if="index === 0"
-            @click.prevent="closeContextMenu"
-            class="context-menu__btn-close"
+            v-else
             href="#"
+            @click.prevent="openSection(item)"
+            :class="subMenuClass(item.txt)"
             >
-              <i class="fa fa-window-close" aria-hidden="true"></i>
+              {{item.txt}}
             </a>
 
-          </h5>
+          </li>
 
-          <a
-          v-else
-          href="#"
-          @click.prevent="openSection(item)"
-          :class="subMenuClass(item.txt)"
-          >
-            {{item.txt}}
-          </a>
-
-        </li>
-
-      </ul>
+        </ul>
 
       </div>
 
@@ -130,7 +115,6 @@
 </template>
 
 <script>
-
 import menuData from './support/menu-data';
 import kebabCase from 'lodash/kebabCase';
 
@@ -185,7 +169,6 @@ export default {
     },
 
     openSection(item) {
-
       this.activeSubMenu = item.txt;
 
       this.$router.push(this.getUrl(item));
@@ -205,5 +188,6 @@ export default {
       return this.menuItens.length;
     },
   }
+
 }
 </script>

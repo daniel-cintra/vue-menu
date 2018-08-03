@@ -1,4 +1,5 @@
 <template>
+
   <div id="wrapper" :class="wrapperClass">
 
     <MenuToggleBtn></MenuToggleBtn>
@@ -10,6 +11,7 @@
     <router-view></router-view>
 
   </div>
+
 </template>
 
 <script>
@@ -37,6 +39,7 @@ export default {
     window.bus.$on('menu/closeMobileMenu', () => {
       this.isOpenMobileMenu = false;
     });
+
   },
 
 
@@ -53,7 +56,9 @@ export default {
       };
     },
   }
+
 }
+
 </script>
 
 <style lang="scss">

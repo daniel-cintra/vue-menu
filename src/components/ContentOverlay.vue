@@ -1,8 +1,8 @@
 <template>
 
   <div
-  class="content-overlay"
   @click.prevent="closeMobileMenu"
+  class="content-overlay"
   ></div>
 
 </template>

@@ -9,6 +9,7 @@ export default new Router({
 
   routes: [
 
+    // loads Home component
     {
       path: '/',
       name: 'home',
@@ -18,9 +19,9 @@ export default new Router({
       path: '/page/:sectionSlug',
       name: 'dynamicContent',
       // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
+      // this generates a separate chunk (dynamicContent.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/DynamicContent.vue')
+      component: () => import(/* webpackChunkName: "dynamicContent" */ './views/DynamicContent.vue')
     },
 
   ]

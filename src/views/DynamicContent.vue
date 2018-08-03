@@ -5,7 +5,7 @@
     <div class="main-content__top">
 
         <h1 class="main-content__title">
-        {{sectionName}}
+          {{sectionName}}
         </h1>
 
     </div>
@@ -35,4 +35,5 @@ export default {
   }
 
 }
+
 </script>
